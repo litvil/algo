@@ -2,6 +2,7 @@ package com.litvil.algo.tree;
 
 import com.litvil.algo.tree.base.BinaryTree;
 import com.litvil.algo.tree.base.Node;
+import java.util.Stack;
 
 // Average & Worst Time: O(n2) | Space: O(1)
 // Bubble sort is also very simple. It iterates through the array and compares each element with the item after it
@@ -53,6 +54,40 @@ public class TreeTraversal extends BinaryTree {
     printInorder(node.right);
   }
 
+  /* Given a binary tree, print its nodes in inorder*/
+  public void printInorderNoRecursion(Node node) {
+
+    if (root == null) {
+      return;
+    }
+
+    Stack<Node> s = new Stack<>();
+    Node curr = root;
+
+    // traverse the tree
+    while (curr != null || s.size() > 0) {
+
+      /* Reach the left most Node of the curr Node */
+      while (curr != null) {
+        // place pointer to a tree node on the stack before
+        // traversing the node's left subtree
+        s.push(curr);
+        curr = curr.left;
+      }
+
+      /* Current must be NULL at this point */
+      curr = s.pop();
+
+      System.out.print(curr.key + " ");
+
+            /* we have visited the node and its
+               left subtree.  Now, it's right
+               subtree's turn */
+      curr = curr.right;
+
+    }
+  }
+
   /* Given a binary tree, print its nodes in preorder*/
   public void printPreorder(Node node) {
     if (node == null) {
@@ -70,7 +105,15 @@ public class TreeTraversal extends BinaryTree {
   }
 
   // Wrappers over above recursive functions
-  public void printPostorder()  {     printPostorder(root);  }
-  public void printInorder()    {     printInorder(root);   }
-  public void printPreorder()   {     printPreorder(root);  }
+  public void printPostorder() {
+    printPostorder(root);
+  }
+
+  public void printInorder() {
+    printInorder(root);
+  }
+
+  public void printPreorder() {
+    printPreorder(root);
+  }
 }
