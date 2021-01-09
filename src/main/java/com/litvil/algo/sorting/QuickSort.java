@@ -6,15 +6,12 @@ public class QuickSort {
   // and places all smaller (smaller than pivot) to left of pivot and all greater elements to right of pivot
   // Complexity: O(n2)
   // Average Time: O(n log n), Worst Time: O(n2) | Space: O(n log n)
-  static int partition(int input[], int low, int high)
-  {
+  static int partition(int input[], int low, int high) {
     int pivot = input[high];
-    int i = (low-1); // index of smaller element
-    for (int j=low; j<high; j++)
-    {
+    int i = (low - 1); // index of smaller element
+    for (int j = low; j < high; j++) {
       // If current element is smaller than the pivot
-      if (input[j] < pivot)
-      {
+      if (input[j] < pivot) {
         i++;
 
         // swap input[i] and input[j]
@@ -23,9 +20,9 @@ public class QuickSort {
     }
 
     // swap input[i+1] and input[high] (or pivot)
-    swapElements(input, i+1, high);
+    swapElements(input, i + 1, high);
 
-    return i+1;
+    return i + 1;
   }
 
   private static void swapElements(int[] input, int i, int j) {
