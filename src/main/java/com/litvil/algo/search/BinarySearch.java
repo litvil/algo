@@ -1,5 +1,7 @@
 package com.litvil.algo.search;
 
+import java.util.ArrayList;
+
 public class BinarySearch {
   private static int binarySearch(int arr[], int l, int r, int x)
   {
