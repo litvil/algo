@@ -14,9 +14,7 @@ class SubarrayWithGivenSumTest {
   @Test
   @DisplayName("Run")
   public void test1() {
-    final ArrayList<Integer> range = SubarrayWithGivenSum.subarraySum(5, 12,
-        new int[] {1, 2, 3, 7, 5}
-    );
+    final ArrayList<Integer> range = SubarrayWithGivenSum.subarraySum(5, 12, new int[] {1, 2, 3, 7, 5});
 
     assertEquals(List.of(2,4), range);
   }
