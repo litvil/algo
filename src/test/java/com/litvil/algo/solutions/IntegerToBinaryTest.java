@@ -2,19 +2,17 @@ package com.litvil.algo.solutions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.util.ArrayList;
-import java.util.List;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class SubarrayWithGivenSumTest {
+class IntegerToBinaryTest {
   @Test
   @DisplayName("Run")
   public void test1() {
-    final ArrayList<Integer> range = SubarrayWithGivenSum.subarraySum(5, 12, new int[] {1, 2, 3, 7, 5});
-
-    assertEquals(List.of(2,4), range);
+    assertEquals("10001", IntegerToBinary.convert(17));
+    assertEquals("1000010001", IntegerToBinary.convert(529));
+    assertEquals("10000010001", IntegerToBinary.convert(1041));
   }
 }
