@@ -1,6 +1,8 @@
 package com.litvil.algo.solutions;
 
 /**
+ * https://app.codility.com/programmers/lessons/1-iterations/binary_gap/
+ *
  * A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at
  * both ends in the binary representation of N.
 
@@ -21,7 +23,7 @@ package com.litvil.algo.solutions;
  * and so its longest binary gap is of length 5. Given N = 32 the function should return 0, because N has binary
  * representation '100000' and thus no binary gaps.
  */
-public class BinaryGap {
+class BinaryGap {
   static int solution(int N) {
     if (N < 1) {
       return 0;
