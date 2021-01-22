@@ -16,4 +16,13 @@ class IntegerToBinaryTest {
     assertEquals("10000010001", IntegerToBinary.convert(1041));
     assertEquals("100000", IntegerToBinary.convert(32));
   }
+
+  @Test
+  @DisplayName("Run with Java")
+  public void test2() {
+    assertEquals("10001", IntegerToBinary.convertJava(17));
+    assertEquals("1000010001", IntegerToBinary.convertJava(529));
+    assertEquals("10000010001", IntegerToBinary.convertJava(1041));
+    assertEquals("100000", IntegerToBinary.convertJava(32));
+  }
 }

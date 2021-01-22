@@ -26,4 +26,7 @@ public class IntegerToBinary {
     return out.toString();
 
   }
+  static String convertJava(Integer n) {
+    return Integer.toBinaryString(n);
+  }
 }
