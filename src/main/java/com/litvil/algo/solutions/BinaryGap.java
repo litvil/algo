@@ -1,5 +1,7 @@
 package com.litvil.algo.solutions;
 
+import java.util.StringTokenizer;
+
 /**
  * https://app.codility.com/programmers/lessons/1-iterations/binary_gap/
  *
@@ -55,6 +57,11 @@ class BinaryGap {
       }
 
     }
+    for (StringTokenizer stringTokenizer = new StringTokenizer(str); stringTokenizer.hasMoreTokens(); ) {
+      String s = stringTokenizer.nextToken();
+
+    }
+
     return max;
   }
 }
