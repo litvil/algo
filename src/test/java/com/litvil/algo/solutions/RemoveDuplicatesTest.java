@@ -1,7 +1,8 @@
-package com.litvil.algo.search;
+package com.litvil.algo.solutions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.litvil.algo.solutions.RemoveDuplicates;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;

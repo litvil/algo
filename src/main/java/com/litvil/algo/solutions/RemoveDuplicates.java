@@ -1,4 +1,4 @@
-package com.litvil.algo.search;
+package com.litvil.algo.solutions;
 
 import static org.junit.Assert.assertEquals;
 
